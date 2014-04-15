@@ -1,0 +1,116 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<HTML>
+<HEAD>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<TITLE></TITLE>
+    <script type="text/javascript">
+        function getData(){
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth()+1; //January is 0!
+            var yyyy = today.getFullYear();
+            
+            if(dd<10) {
+                dd='0'+dd
+            } 
+            
+            if(mm<10) {
+                mm='0'+mm
+            } 
+            
+            today = mm+'/'+dd+'/'+yyyy;
+            document.getElementById('date').innerHTML= today;
+           var query = window.location.search.substring(1);
+           var vars = query.split("&"); 
+            var ids = new Array()
+            ids[0] = "company";
+            ids[1] = "designer";
+           for (var i=0;i<vars.length;i++) {
+               var pair = vars[i].split("=");
+               var innerValue = pair[1];
+                innerValue = innerValue.replace("+"," ");
+               if(pair[0] == ids[0]){
+                   document.getElementById(ids[0]).innerHTML = innerValue;
+               } else if(pair[0] == ids[1]){
+                    document.getElementById(ids[1]).innerHTML = innerValue;
+               }
+           }
+        }
+    </script>
+<link rel="stylesheet" href="Styles/business.css"/>
+</HEAD>
+
+<BODY onload="getData()">
+
+<DIV id="page_1">
+<DIV id="dimg1">
+<IMG src="BusinessModelCanvas_images/BusinessModelCanvas1x1.jpg" id="img1" style="width:100%;">
+</DIV>
+
+
+<DIV class="dclr"></DIV>
+<DIV id="id_1">
+<DIV id="id_1_1">
+<TABLE cellpadding=0 cellspacing=0 class="t0">
+<TR>
+	<TD class="tr0 td0"><P class="p0 ft0" id="hello">The Business Model Canvas</P></TD>
+	<TD class="tr0 td1"><P class="p1 ft1">Designed for: <span id = "company"></span> </P></TD>
+	<TD class="tr0 td3"><P class="p2 ft1">Designed by: <span id = "designer"></span></P></TD>
+</TR>
+</TABLE>
+</DIV>
+<DIV id="id_1_2">
+<TABLE cellpadding=0 cellspacing=0 class="t1">
+<TR>
+	<TD class="tr2 td4"><P class="p3 ft5" style="padding-top:50%;">On: </P></TD>
+    <td style="margin-bottom:100px"><span class="ft14" style="padding-left: 50%;" id="date"></span></td>
+</TR>
+</TABLE>
+</DIV>
+</DIV>
+<DIV id="id_2">
+<DIV id="id_2_1">
+<P class="p7 ft8">Key Partners</P>
+<P class="p12 ft14">Who are our Key Partners? <br/>Who are our key suppliers?</P>
+</DIV>
+<DIV id="id_2_2">
+<P class="p7 ft8">Key Activities</P>
+<P class="p12 ft14">What Key Activities do our Value Propositions require? <br/>Our Distribution Channels?</P>
+<P class="p16 ft8">Key Resources</P>
+<P class="p12 ft14">What Key Resources do our Value Propositions require? Our Distribution Channels? Customer Relationships? Revenue Streams?</P>
+</DIV>
+<DIV id="id_2_3">
+<P class="p7 ft8">Value Propositions</P>
+<P class="p12 ft14">What value do we deliver to the customer? <br/>Which one of our customer’s problems are we helping to solve?</P>
+</DIV>
+<DIV id="id_2_4">
+<P class="p7 ft8">Customer Relationships</P>
+<P class="p12 ft20">What type of relationship does each of our Customer Segments expect us to establish and maintain with them?</P>
+<P class="p30 ft8">Channels</P>
+<P class="p12 ft14">Through which Channels do our Customer Segments want to be reached?</P>
+</DIV>
+<DIV id="id_2_5">
+<P class="p7 ft8" style="padding-left:8%;">Customer Segments</P>
+<P class="p12 ft20" style="padding-left:8%;">For whom are we creating value?</P>
+<P class="p12 ft23" style="padding-left:8%;">Who are our most important customers?</P>
+<P class="p12 ft13" style="padding-left:8%;padding-top:0.8%;">Mass Market</P>
+<P class="p12 ft13" style="padding-left:8%;">Niche Market</P>
+<P class="p12 ft13" style="padding-left:8%;">Segmented</P>
+<P class="p12 ft13" style="padding-left:8%;">Diversified</P>
+<P class="p12 ft13" style="padding-left:8%;"><NOBR>Multi-sided</NOBR> Platform</P>
+</DIV>
+</DIV>
+<DIV id="id_3">
+<DIV id="id_3_1">
+<P class="p7 ft8">Cost Structure</P>
+<P class="p12 ft14">What are the most important costs inherent in our business model? Which Key Resources are most expensive?</P>
+</DIV>
+<DIV id="id_3_2">
+<P class="p7 ft8">Revenue Streams</P>
+<P class="p12 ft14">For what value are our customers really willing to pay? For what do they currently pay?</P>
+</DIV>
+</DIV>
+</DIV>
+
+</BODY>
+</HTML>
