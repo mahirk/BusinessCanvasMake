@@ -7,7 +7,7 @@ body{
     padding-left: 10%;
     padding-right: 10%;
     padding-top:1%;
-    width: 75%;
+    width: 87%;
 }
 
 /*Top data*/
@@ -16,6 +16,16 @@ img {
 	width: 15%;
     padding-bottom:5%;
 
+}
+
+div.boxhead{
+    text-align:center;
+    text-align-last:center;
+    background-color:transparent;
+    background-image:none;
+    background:rgb(255, 255, 255) transparent;
+    width:50%;
+    margin-left: 20%;
 }
 
 company {
@@ -32,7 +42,7 @@ project{
     font-size:1.5em;
 }
 div {
-	  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   border: 1px solid #cccccc;
   *border: 0;
   border-bottom-color: #b3b3b3;
@@ -64,8 +74,8 @@ div {
   background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
   background-repeat: repeat-x;
 
-height:41px;
-width:116px;
+height:auto;
+width:15%;
 text-decoration:none;
 text-align:center;
 }
@@ -90,9 +100,9 @@ div:hover, div:focus {
 }
 div {
     float:left;
-    padding: 5% 5% 0px 5%;
+    padding: 0.5% 5% 0px 5%;
     margin: 0px 2% 2% 2%;
-    text-align:center;
+    text-align:left;
     display:block;
     font-family: calibri;
 }
@@ -185,7 +195,7 @@ color: #ffffff;
 }
 
 section{
-    margin-left:17%;
+    
     align-items:center;
 }
 
